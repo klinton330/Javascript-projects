@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input">
+        <h1>QR Code Generator</h1>
+        <form action="#" id="frm">
+          <div class="form-group">
+            <label for="url">Enter the website link</label>
+            <input type="url" id="url" placeholder="Enter URL" required />
+          </div>
+
+          <div class="form-group">
+            <label for="size">Select your size</label>
+            <select name="" id="size">
+              <option value="100">100x100</option>
+              <option value="200">200x200</option>
+              <option value="300">300x300</option>
+              <option value="400">400x400</option>
+            </select>
+          </div>
+
+          <div class="form-single-group">
+            <label for="colorDark">Color Dark</label>
+            <input type="color" id="colorDark" value="#000000" />
+          </div>
+
+          <div class="form-single-group">
+            <label for="colorWhite">Color White</label>
+            <input type="color" id="colorWhite" value="#ffffff" />
+          </div>
+          <div id="btn-group">
+            <button type="submit">Generate QR Code</button>
+            <a href="#" type="button" id="bt-save" download="#">Save</a>
+          </div>
+        </form>
+      </div>
+      <div class="output">
+        <div id="qrcode" class="qrcode">
+          <img src="/assets/Qrcode.png" alt="" class="image" />
+        </div>
+        <div id="loading">
+          <div id="spinner"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
